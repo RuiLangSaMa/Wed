@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>睿朗SaMa再开发——广东省教育综合服务平台</title>
+    <link rel="stylesheet" href="./static/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/login.css">
+</head>
+
+<body>
+    <div class="mian-content">
+        <div class="main-head">
+            <div class="head-logo"></div>
+        </div>
+        <div class="main-body clearfix">
+            <div class="main-left pull-left">
+                <img class="img-left" src="./static/left-bg.png" alt="">
+            </div>
+            <div class="main-right pull-left">
+                <div class="login-box">
+                    <!-- Nav tabs -->
+                    <iframe id="iFrame1" name="iFrame1" style="width: 100%;height: 100%;" frameborder="0" src="https://gl.gdedu.gov.cn/uc/wcms/login.htm" scrolling="no"></iframe>
+                    <!-- Tab panes -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+<p>输完账号密码按回车！！</p>
+<p>睿朗SaMa再开发版</p>
+        <a href="https://gl.gdedu.gov.cn/gdeducms/help.pdf" target="_blank" style="color:red;" id="url">广东省教育综合服务平台登录操作指引下载</a>    
+        <p>版权所有&nbsp;&nbsp;广东省教育厅</p>
+    </div>
+
+
+
+<script src="./static/hm.js"></script>
+<script src="./static/jquery-1.9.1.min.js"></script>
+<script src="./static/bootstrap.min.js"></script>
+<script src="./static/common.js"></script>
+<script language="javascript">
+        document.getElementById("url").onclick=function(){
+                document.getElementById("url").href="https://gl.gdedu.gov.cn/gdeducms/help.pdf?"+new Date().getTime();
+
+                }
+</script>
+
+</body></html>
