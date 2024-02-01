@@ -1,94 +1,24 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>向睿朗的iPhone发送消息</title>
-<style>
-    /**初始化样式**/
-    *{margin:0;padding:0;}
-    /**清除浮动样式**/
-    .clc{clear:both;}
-    /**文字居中**/
-    .txtcenter{text-align:center;}
-    
-    .url_content{width:70%;margin:20px auto;}
-    .c_input,.c_btn,.c_show{overflow:hidden;}
-    
-    .ci_left,.ci_right{float:left;min-height:200px;border:1px solid #AEAEAE;}
-    .ci_left{width:40%;}
-    .ci_right{margin-left:1%;width:58%;background:#E7E7E7;}
-    
-    .cil_unit{width:70%;margin:20px auto;overflow:hidden;}
-    .inp_txt,.cil_input{float:left;}
-    .inp_txt{color:#30C0FF;height:30px;margin-top:5px;width:100px;}
-    .cil_input{height:30px;width:180px;border-radius:5px;border:1px solid #CFCFCF;}
-    
-    .btn_1,.btn_2,.btn_3{float:left;width:18%;margin:20px 5%;height:45px;line-height:45px;border-radius:5px;background:#30C0FF;color:white;}
-    
-    .cs_f{border:1px solid #C7C7C7;height:45px;line-height:45px;margin:20px auto;font-size:18px;overflow:hidden;}
-    .c_red{color:red;}
-    .c_green{color:green;}
-</style>
-<!-- 引入jq -->
-<script src='/api/jquery.min.js'></script>
+<script src="/api/jquery-latest.js"></script>
 </head>
 <body>
-    <div class='url_content'>
-        <div class='c_input'>
-            <div class='ci_left'>
-                <div class='cil_unit'>
-                    <div class='inp_txt'>这里不要动</div>
-                    <input class='cil_input serveraddr' type='text' placeholder='api.day.app/DxPYtoyQJ6VdobUhKjxBZV/' />
-                </div>
-                <div class='cil_unit'>
-                    <div class='inp_txt'>你的名字：</div>
-				<br></br>
-			<p>一定要记得加上那个数字，不然我不能确定是不是真的是你！</p>
-                    <input class='cil_input idaccount' type='text' placeholder='在这里输入' />
-                </div>
-                <div class='cil_unit'>
-                    <div class='inp_txt'>你想说的话：</div>
-                    <input class='cil_input setvalue' type='text' placeholder='在这里输入' />
-                </div>
-            </div>
-            <div class='ci_right'>
-                <p>返回结果：</p>
-                <p class='txtcenter result'>这里会显示结果。</p>
-            </div>
-        </div>
-        <div class='clc'></div>
-        <div class='c_btn'>
-            <div class='btn_1 txtcenter'>发送 (function1)</div>
-            
-        </div>
-        <div class='clc'></div>
-        <div class='c_show'>
-            
-        </div>
-    </div>
-    
-    <script>
-    
-        function changeContent(flag){
-            var inp1 = $.trim($(".serveraddr").val()) ;//服务器地址
-            var inp2 = $.trim($(".idaccount").val()) ;//ID
-            var inp3 = $.trim($(".setvalue").val()) ;//设置
-            if(flag=="1"){
-                var content = "https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+inp2+"/"+inp3";
-            }else if(flag=="2"){
-                var content = "https://"inp1+inp2+"/"+inp3";
-            }
-            $(".result").html(content);
-        }
-        $(".btn_1").click(function(){//功能1按钮点击触发
-            changeContent("1");
-        });
-        $(".btn_2").click(function(){//功能1按钮点击触发
-            changeContent("2");
-        });
-        
-    </script>
-    
+<h2>输入你的名字和你要说的内容</h2>
+<input type="text" id="input2">
+<h2>这里不用输入！</h2>
+<input type="text" id="input1">
+<p>点击发送后如果跳转到一个页面，里面有200和success这两个东西就代表发送成功了！！</p>
+<h2><button id="button"><h2>发送</h2></button></h2>
+<script>
+var url="";
+$("#button").click(function(){
+url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+$("#input1)+"/"+$("#input2").val();
+window.location.href=url;
+})
+</script>
 </body>
-                      </html>
+</html>
