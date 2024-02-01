@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>字符串拼接返回url地址</title>
+<style>
+    /**初始化样式**/
+    *{margin:0;padding:0;}
+    /**清除浮动样式**/
+    .clc{clear:both;}
+    /**文字居中**/
+    .txtcenter{text-align:center;}
+    
+    .url_content{width:70%;margin:20px auto;}
+    .c_input,.c_btn,.c_show{overflow:hidden;}
+    
+    .ci_left,.ci_right{float:left;min-height:200px;border:1px solid #AEAEAE;}
+    .ci_left{width:40%;}
+    .ci_right{margin-left:1%;width:58%;background:#E7E7E7;}
+    
+    .cil_unit{width:70%;margin:20px auto;overflow:hidden;}
+    .inp_txt,.cil_input{float:left;}
+    .inp_txt{color:#30C0FF;height:30px;margin-top:5px;width:100px;}
+    .cil_input{height:30px;width:180px;border-radius:5px;border:1px solid #CFCFCF;}
+    
+    .btn_1,.btn_2,.btn_3{float:left;width:18%;margin:20px 5%;height:45px;line-height:45px;border-radius:5px;background:#30C0FF;color:white;}
+    
+    .cs_f{border:1px solid #C7C7C7;height:45px;line-height:45px;margin:20px auto;font-size:18px;overflow:hidden;}
+    .c_red{color:red;}
+    .c_green{color:green;}
+</style>
+<!-- 引入jq -->
+<script src='jquery-1.7.2.min.js'></script>
+</head>
+<body>
+    <div class='url_content'>
+        <div class='c_input'>
+            <div class='ci_left'>
+                <div class='cil_unit'>
+                    <div class='inp_txt'>服务器地址：</div>
+                    <input class='cil_input serveraddr' type='text' placeholder='请输入服务器地址' />
+                </div>
+                <div class='cil_unit'>
+                    <div class='inp_txt'>ID号：</div>
+                    <input class='cil_input idaccount' type='text' placeholder='请输入ID' />
+                </div>
+                <div class='cil_unit'>
+                    <div class='inp_txt'>设置项：</div>
+                    <input class='cil_input setvalue' type='text' placeholder='请输入设置项' />
+                </div>
+            </div>
+            <div class='ci_right'>
+                <p>返回结果：</p>
+                <p class='txtcenter result'>这里显示返回来的结果</p>
+            </div>
+        </div>
+        <div class='clc'></div>
+        <div class='c_btn'>
+            <div class='btn_1 txtcenter'>功能1 (function1)</div>
+            <div class='btn_2 txtcenter'>功能2 (function2)</div>
+            <div class='btn_3 txtcenter'>功能3 (function3)</div>
+        </div>
+        <div class='clc'></div>
+        <div class='c_show'>
+            <div class='cs_f'><p>功能1按钮点击效果为：http://<span class='c_red'>xxx.com:222</span>/<span class='c_green'>function1</span>.do?info={"A":"<span class='c_red'>yyy</span>","B":"333<span class='c_green'>funciton1</span>","C":"<span class='c_red'>zzz</span>"}<p></div>
+            <div class='cs_f'><p>功能2按钮点击效果为：http://<span class='c_red'>xxx.com:222</span>/<span class='c_green'>function2</span>.do?info={"A":"<span class='c_red'>yyy</span>","B":"333<span class='c_green'>funciton2</span>"}<p></div>
+        </div>
+    </div>
+    
+    <script>
+    
+        function changeContent(flag){
+            var inp1 = $.trim($(".serveraddr").val()) ;//服务器地址
+            var inp2 = $.trim($(".idaccount").val()) ;//ID
+            var inp3 = $.trim($(".setvalue").val()) ;//设置
+            if(flag=="1"){
+                var content = "http://"+inp1+"/function1.do?info={'A':'"+inp2+"','B':'333function1','C':'"+inp3+"'}";
+            }else if(flag=="2"){
+                var content = "http://"+inp1+"/function2.do?info={'A':'"+inp2+"','B':'333function2'}";
+            }
+            $(".result").html(content);
+        }
+        $(".btn_1").click(function(){//功能1按钮点击触发
+            changeContent("1");
+        });
+        $(".btn_2").click(function(){//功能1按钮点击触发
+            changeContent("2");
+        });
+        
+    </script>
+    
+</body>
+                      </html>
