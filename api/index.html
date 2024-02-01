@@ -30,10 +30,11 @@ background-color:#555555;}
 <p>在下面这个框输入你的名字后用句号隔开再输入你想说的话。</p >
     <p>必须写名字！不然我不知道是谁发的！！</p>
 <input type="text" id="input2">
-<h2>■■这里不要写东西↓✘</h2>
-<input type="text" id="input1">
+    <h2>◆◆◆每次用之前先点击“先点我”，然后再返回填写内容再点发送。</h2>
+    <p>也可以直接点发送，但是会有概率发送失败。</p>
 <p>点击发送后如果跳转到一个页面，里面有200和success这两个东西就代表发送成功了！！</p >
-<button id="button"><h2>☞  发  ✔  送  ☜</h2></button>
+    <button id="ip"><h2>☞先点我☜</h2></button>
+    <button id="button"><h2>☞  发  ✔  送  ☜</h2></button>
   <p>ps:重要事情发微信或QQ。</p >
 <script>
 var url="";
@@ -41,8 +42,8 @@ $("#button").click(function(){
 url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2").val();
 window.location.href=url;
 })
-$("#button").click(function(){
-url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+$("#ip-address").val();
+$("#ip").click(function(){
+url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("这个IP可能即将发送消息")+$("#ip-address").val();
 window.location.href=url;
 })
 </script>
