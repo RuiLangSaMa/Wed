@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>字符串拼接返回url地址</title>
+<title>向睿朗的iPhone发送消息</title>
 <style>
     /**初始化样式**/
     *{margin:0;padding:0;}
@@ -37,33 +38,31 @@
         <div class='c_input'>
             <div class='ci_left'>
                 <div class='cil_unit'>
-                    <div class='inp_txt'>服务器地址：</div>
-                    <input class='cil_input serveraddr' type='text' placeholder='请输入服务器地址' />
+                    <div class='inp_txt'>这里不要动</div>
+                    <input class='cil_input serveraddr' type='text' placeholder='这里不要动' />
                 </div>
                 <div class='cil_unit'>
-                    <div class='inp_txt'>ID号：</div>
-                    <input class='cil_input idaccount' type='text' placeholder='请输入ID' />
+                    <div class='inp_txt'>你的名字：</div>
+                    <input class='cil_input idaccount' type='text' placeholder='（记得加上那个数字）' />
                 </div>
                 <div class='cil_unit'>
-                    <div class='inp_txt'>设置项：</div>
-                    <input class='cil_input setvalue' type='text' placeholder='请输入设置项' />
+                    <div class='inp_txt'>你想说的话：</div>
+                    <input class='cil_input setvalue' type='text' placeholder='' />
                 </div>
             </div>
             <div class='ci_right'>
                 <p>返回结果：</p>
-                <p class='txtcenter result'>这里显示返回来的结果</p>
+                <p class='txtcenter result'>这里会显示结果。</p>
             </div>
         </div>
         <div class='clc'></div>
         <div class='c_btn'>
-            <div class='btn_1 txtcenter'>功能1 (function1)</div>
-            <div class='btn_2 txtcenter'>功能2 (function2)</div>
-            <div class='btn_3 txtcenter'>功能3 (function3)</div>
+            <div class='btn_1 txtcenter'>发送 (function1)</div>
+            
         </div>
         <div class='clc'></div>
         <div class='c_show'>
-            <div class='cs_f'><p>功能1按钮点击效果为：http://<span class='c_red'>xxx.com:222</span>/<span class='c_green'>function1</span>.do?info={"A":"<span class='c_red'>yyy</span>","B":"333<span class='c_green'>funciton1</span>","C":"<span class='c_red'>zzz</span>"}<p></div>
-            <div class='cs_f'><p>功能2按钮点击效果为：http://<span class='c_red'>xxx.com:222</span>/<span class='c_green'>function2</span>.do?info={"A":"<span class='c_red'>yyy</span>","B":"333<span class='c_green'>funciton2</span>"}<p></div>
+            
         </div>
     </div>
     
@@ -74,9 +73,9 @@
             var inp2 = $.trim($(".idaccount").val()) ;//ID
             var inp3 = $.trim($(".setvalue").val()) ;//设置
             if(flag=="1"){
-                var content = "http://"+inp1+"/function1.do?info={'A':'"+inp2+"','B':'333function1','C':'"+inp3+"'}";
+                var content = "https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+inp2+"/"+inp3";
             }else if(flag=="2"){
-                var content = "http://"+inp1+"/function2.do?info={'A':'"+inp2+"','B':'333function2'}";
+                var content = "https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+inp2+"/"+inp3";
             }
             $(".result").html(content);
         }
