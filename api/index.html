@@ -6,6 +6,7 @@
 <script src="/api/jquery-latest.js"></script>
 </head>
 <body>
+<div id="ip-address"></div>
   <h1>向睿朗的iPhone发送消息</h1>
 <h2>■■输入你的名字和你要说的内容</h2>
 <p>输入你的名字后用句号隔开再输入你想说的话。</p>
@@ -21,6 +22,7 @@ $("#button").click(function(){
 url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+$("#input1")+"/"+$("#input2").val();
 window.location.href=url;
 })
+function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "Your IP address is " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
 </script>
 </body>
 </html>
