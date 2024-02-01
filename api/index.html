@@ -39,15 +39,17 @@
             <div class='ci_left'>
                 <div class='cil_unit'>
                     <div class='inp_txt'>这里不要动</div>
-                    <input class='cil_input serveraddr' type='text' placeholder='这里不要动' />
+                    <input class='cil_input serveraddr' type='text' placeholder='api.day.app/DxPYtoyQJ6VdobUhKjxBZV/' />
                 </div>
                 <div class='cil_unit'>
                     <div class='inp_txt'>你的名字：</div>
-                    <input class='cil_input idaccount' type='text' placeholder='（记得加上那个数字）' />
+				<br></br>
+			<p>一定要记得加上那个数字，不然我不能确定是不是真的是你！</p>
+                    <input class='cil_input idaccount' type='text' placeholder='在这里输入' />
                 </div>
                 <div class='cil_unit'>
                     <div class='inp_txt'>你想说的话：</div>
-                    <input class='cil_input setvalue' type='text' placeholder='' />
+                    <input class='cil_input setvalue' type='text' placeholder='在这里输入' />
                 </div>
             </div>
             <div class='ci_right'>
@@ -75,7 +77,7 @@
             if(flag=="1"){
                 var content = "https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+inp2+"/"+inp3";
             }else if(flag=="2"){
-                var content = "https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+inp2+"/"+inp3";
+                var content = "https://"inp1+inp2+"/"+inp3";
             }
             $(".result").html(content);
         }
