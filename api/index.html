@@ -45,6 +45,7 @@ window.location.href=url;
 $("#ip").click(function(){
 url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("这个IP可能即将发送消息")+"/"+$("ip-address").val();
 window.location.href=url;
+    function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "你的IP地址是 " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
 })
 </script>
 </body>
