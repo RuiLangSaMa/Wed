@@ -38,8 +38,7 @@ background-color:#555555;}
   <p>ps:重要事情发微信或QQ。</p >
 <script>
 function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "你的IP地址是 " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
-
-})
+<script>
 var url="";
 $("#button").click(function(){
 url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2").val();
