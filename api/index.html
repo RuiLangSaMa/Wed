@@ -41,14 +41,6 @@ $("#button").click(function(){
 url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2").val();
 window.location.href=url;
 })
-
-var url2="";
-$("#button").click(function(){
-url2="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("消息发送人的IP地址")+"/"+$("#ip-address").val();
-window.location.href=url2;
-})
-function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "你的IP地址是 " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
-
 </script>
 </body>
 </html>
