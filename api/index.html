@@ -9,20 +9,21 @@
 <div id="ip-address"></div>
   <h1>向睿朗的iPhone发送消息</h1>
 <h2>■■输入你的名字和你要说的内容</h2>
-<p>输入你的名字后用句号隔开再输入你想说的话。</p>
+<p>输入你的名字后用句号隔开再输入你想说的话。</p >
 <input type="text" id="input2">
 <h2>■■这里不用输入！</h2>
 <input type="text" id="input1">
-<p>点击发送后如果跳转到一个页面，里面有200和success这两个东西就代表发送成功了！！</p>
+<p>点击发送后如果跳转到一个页面，里面有200和success这两个东西就代表发送成功了！！</p >
 <button id="button"><h2>   发      送   </h2></button>
-  <p>ps:重要事情发微信或QQ，不要通过此方式联系！</p>
+  <p>ps:重要事情发微信或QQ，不要通过此方式联系！</p >
 <script>
 var url="";
 $("#button").click(function(){
-url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+$("#input1")+"/"+$("#input2").val();
+url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2").val();
 window.location.href=url;
 })
-function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "Your IP address is " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
+function getIPAddress() {    fetch("https://api.ipify.org?format=json")      .then(response => response.json())      .then(data => {        document.getElementById("ip-address").textContent = "你的IP地址是 " + data.ip;      })      .catch(error => {        console.log("Error:", error);      });  }  getIPAddress();</script>
+
 </script>
 </body>
 </html>
