@@ -38,7 +38,11 @@ background-color:#555555;}
 <script>
 var url="";
 $("#button").click(function(){
-url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2")+$("#ip-address").val();
+url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+("来自网页的消息")+"/"+$("#input2").val();
+window.location.href=url;
+})
+$("#button").click(function(){
+url="https://api.day.app/DxPYtoyQJ6VdobUhKjxBZV/"+$("#ip-address").val();
 window.location.href=url;
 })
 </script>
